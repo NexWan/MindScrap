@@ -1,3 +1,4 @@
 env/
 src/__pycache__/
-*.json
+cookies.json
+data.json

@@ -1,0 +1,769 @@
+[
+    {
+        "Materia": "Af1 / Calculo Diferencial",
+        "Profesor": "Gaytan Tanguma Celina",
+        "Grupo": "A",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "10:00-11:00",
+            "Martes": "10:00-11:00",
+            "Miercoles": "10:00-11:00",
+            "Jueves": "10:00-11:00",
+            "Viernes": "10:00-11:00"
+        }
+    },
+    {
+        "Materia": "Af1 / Calculo Diferencial",
+        "Profesor": "Gaytan Tanguma Celina",
+        "Grupo": "B",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "11:00-12:00",
+            "Martes": "11:00-12:00",
+            "Miercoles": "11:00-12:00",
+            "Jueves": "11:00-12:00",
+            "Viernes": "11:00-12:00"
+        }
+    },
+    {
+        "Materia": "Af1 / Calculo Diferencial",
+        "Profesor": "Ferniza Sandoval Ana Victoria",
+        "Grupo": "C",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "13:00-14:00",
+            "Martes": "13:00-14:00",
+            "Miercoles": "13:00-14:00",
+            "Jueves": "13:00-14:00",
+            "Viernes": "13:00-14:00"
+        }
+    },
+    {
+        "Materia": "Af1 / Calculo Diferencial",
+        "Profesor": "Gonzalez Martinez Edna Marina",
+        "Grupo": "D",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "15:00-16:00",
+            "Martes": "15:00-16:00",
+            "Miercoles": "15:00-16:00",
+            "Jueves": "15:00-16:00",
+            "Viernes": "15:00-16:00"
+        }
+    },
+    {
+        "Materia": "Af1 / Calculo Diferencial",
+        "Profesor": "Gaytan Tanguma Celina",
+        "Grupo": "E",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "12:00-13:00",
+            "Martes": "12:00-13:00",
+            "Miercoles": "12:00-13:00",
+            "Jueves": "12:00-13:00",
+            "Viernes": "12:00-13:00"
+        }
+    },
+    {
+        "Materia": "Af1 / Calculo Diferencial",
+        "Profesor": "Zavala Aguillon Brenda",
+        "Grupo": "R",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "07:00-08:00",
+            "Martes": "07:00-08:00",
+            "Miercoles": "07:00-08:00",
+            "Jueves": "07:00-08:00",
+            "Viernes": "07:00-08:00"
+        }
+    },
+    {
+        "Materia": "Af1 / Calculo Diferencial",
+        "Profesor": "Juan Vazquez Carrillo",
+        "Grupo": "S",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "07:00-08:00",
+            "Martes": "07:00-08:00",
+            "Miercoles": "07:00-08:00",
+            "Jueves": "07:00-08:00",
+            "Viernes": "07:00-08:00"
+        }
+    },
+    {
+        "Materia": "Af1 / Calculo Diferencial",
+        "Profesor": "Martinez Villafuerte Veronica",
+        "Grupo": "T",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "12:00-13:00",
+            "Martes": "12:00-13:00",
+            "Miercoles": "12:00-13:00",
+            "Jueves": "12:00-13:00",
+            "Viernes": "12:00-13:00"
+        }
+    },
+    {
+        "Materia": "Af1 / Calculo Diferencial",
+        "Profesor": "Villarreal Sifuentes Gerardo Emanuel",
+        "Grupo": "U",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "18:00-19:00",
+            "Martes": "18:00-19:00",
+            "Miercoles": "18:00-19:00",
+            "Jueves": "18:00-19:00",
+            "Viernes": "18:00-19:00"
+        }
+    },
+    {
+        "Materia": "Af1 / Calculo Diferencial",
+        "Profesor": "Sanchez Gonzalez Eliana Sarahi",
+        "Grupo": "V",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "11:00-12:00",
+            "Martes": "11:00-12:00",
+            "Miercoles": "11:00-12:00",
+            "Jueves": "11:00-12:00",
+            "Viernes": "11:00-12:00"
+        }
+    },
+    {
+        "Materia": "Af1 / Calculo Diferencial",
+        "Profesor": "Lopez Fernandez Fabio Alberto",
+        "Grupo": "W",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "14:00-15:00",
+            "Martes": "14:00-15:00",
+            "Miercoles": "14:00-15:00",
+            "Jueves": "14:00-15:00",
+            "Viernes": "14:00-15:00"
+        }
+    },
+    {
+        "Materia": "Af1 / Calculo Diferencial",
+        "Profesor": "Zavala Aguillon Brenda",
+        "Grupo": "X",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "10:00-11:00",
+            "Martes": "10:00-11:00",
+            "Miercoles": "10:00-11:00",
+            "Jueves": "10:00-11:00",
+            "Viernes": "10:00-11:00"
+        }
+    },
+    {
+        "Materia": "Af1 / Calculo Diferencial",
+        "Profesor": "Sanchez Gonzalez Eliana Sarahi",
+        "Grupo": "Y",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "12:00-13:00",
+            "Martes": "12:00-13:00",
+            "Miercoles": "12:00-13:00",
+            "Jueves": "12:00-13:00",
+            "Viernes": "12:00-13:00"
+        }
+    },
+    {
+        "Materia": "Af1 / Calculo Diferencial",
+        "Profesor": "Olmedo Landeros Irma Karina",
+        "Grupo": "Z",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "17:00-18:00",
+            "Martes": "17:00-18:00",
+            "Miercoles": "17:00-18:00",
+            "Jueves": "17:00-18:00",
+            "Viernes": "17:00-18:00"
+        }
+    },
+    {
+        "Materia": "Bf1 / Fundamentos De Programacion",
+        "Profesor": "De La Barrera Gomez Helue Isabel",
+        "Grupo": "A",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "07:00-08:00",
+            "Martes": "07:00-08:00",
+            "Miercoles": "07:00-08:00",
+            "Jueves": "07:00-08:00",
+            "Viernes": "07:00-08:00"
+        }
+    },
+    {
+        "Materia": "Bf1 / Fundamentos De Programacion",
+        "Profesor": "Campos Ortiz Araceli",
+        "Grupo": "Af",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "08:00-09:00",
+            "Martes": "08:00-09:00",
+            "Miercoles": "08:00-09:00",
+            "Jueves": "08:00-09:00",
+            "Viernes": "08:00-09:00"
+        }
+    },
+    {
+        "Materia": "Bf1 / Fundamentos De Programacion",
+        "Profesor": "Campos Ortiz Araceli",
+        "Grupo": "B",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "09:00-10:00",
+            "Martes": "09:00-10:00",
+            "Miercoles": "09:00-10:00",
+            "Jueves": "09:00-10:00",
+            "Viernes": "09:00-10:00"
+        }
+    },
+    {
+        "Materia": "Bf1 / Fundamentos De Programacion",
+        "Profesor": "Iga Berlanga Sergio Constantino",
+        "Grupo": "Bg",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "08:00-09:00",
+            "Martes": "08:00-09:00",
+            "Miercoles": "08:00-09:00",
+            "Jueves": "08:00-09:00",
+            "Viernes": "08:00-09:00"
+        }
+    },
+    {
+        "Materia": "Bf1 / Fundamentos De Programacion",
+        "Profesor": "Alvarez Sandoval Martha Patricia",
+        "Grupo": "C",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "11:00-12:00",
+            "Martes": "11:00-12:00",
+            "Miercoles": "11:00-12:00",
+            "Jueves": "11:00-12:00",
+            "Viernes": "11:00-12:00"
+        }
+    },
+    {
+        "Materia": "Bf1 / Fundamentos De Programacion",
+        "Profesor": "De La Barrera Gomez Helue Isabel",
+        "Grupo": "Ch",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "12:00-13:00",
+            "Martes": "12:00-13:00",
+            "Miercoles": "12:00-13:00",
+            "Jueves": "12:00-13:00",
+            "Viernes": "12:00-13:00"
+        }
+    },
+    {
+        "Materia": "Bf1 / Fundamentos De Programacion",
+        "Profesor": "Hernandez Calderon Carmen Melida",
+        "Grupo": "D",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "13:00-14:00",
+            "Martes": "13:00-14:00",
+            "Miercoles": "13:00-14:00",
+            "Jueves": "13:00-14:00",
+            "Viernes": "13:00-14:00"
+        }
+    },
+    {
+        "Materia": "Bf1 / Fundamentos De Programacion",
+        "Profesor": "Hernandez Calderon Carmen Melida",
+        "Grupo": "Di",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "14:00-15:00",
+            "Martes": "14:00-15:00",
+            "Miercoles": "14:00-15:00",
+            "Jueves": "14:00-15:00",
+            "Viernes": "14:00-15:00"
+        }
+    },
+    {
+        "Materia": "Bf1 / Fundamentos De Programacion",
+        "Profesor": "Muniz Jimenez Araceli Estefania",
+        "Grupo": "E",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "14:00-15:00",
+            "Martes": "14:00-15:00",
+            "Miercoles": "14:00-15:00",
+            "Jueves": "14:00-15:00",
+            "Viernes": "14:00-15:00"
+        }
+    },
+    {
+        "Materia": "Bf1 / Fundamentos De Programacion",
+        "Profesor": "Solis Galindo Marco Antonio",
+        "Grupo": "Eh",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "15:00-16:00",
+            "Martes": "15:00-16:00",
+            "Miercoles": "15:00-16:00",
+            "Jueves": "15:00-16:00",
+            "Viernes": "15:00-16:00"
+        }
+    },
+    {
+        "Materia": "Bf1 / Fundamentos De Programacion",
+        "Profesor": "De La Barrera Gomez Helue Isabel",
+        "Grupo": "R",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "08:00-09:00",
+            "Martes": "08:00-09:00",
+            "Miercoles": "08:00-09:00",
+            "Jueves": "08:00-09:00",
+            "Viernes": "08:00-09:00"
+        }
+    },
+    {
+        "Materia": "Bf1 / Fundamentos De Programacion",
+        "Profesor": "Sanchez Montes Rocio Cipactli",
+        "Grupo": "S",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "16:00-17:00",
+            "Martes": "16:00-17:00",
+            "Miercoles": "16:00-17:00",
+            "Jueves": "16:00-17:00",
+            "Viernes": "16:00-17:00"
+        }
+    },
+    {
+        "Materia": "Bf1 / Fundamentos De Programacion",
+        "Profesor": "Campos Ortiz Araceli",
+        "Grupo": "T",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "10:00-11:00",
+            "Martes": "10:00-11:00",
+            "Miercoles": "10:00-11:00",
+            "Jueves": "10:00-11:00",
+            "Viernes": "10:00-11:00"
+        }
+    },
+    {
+        "Materia": "Cf1 / Taller De Etica",
+        "Profesor": "Quijano Urbano Maria Del Refugio",
+        "Grupo": "1",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "07:00-08:00",
+            "Martes": "07:00-08:00",
+            "Miercoles": "07:00-08:00",
+            "Jueves": "07:00-08:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Cf1 / Taller De Etica",
+        "Profesor": "Berino Valdes Mayra Angelica",
+        "Grupo": "2",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "08:00-09:00",
+            "Martes": "08:00-09:00",
+            "Miercoles": "08:00-09:00",
+            "Jueves": "08:00-09:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Cf1 / Taller De Etica",
+        "Profesor": "Villegas Balderas Abril Rocio",
+        "Grupo": "4",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "10:00-11:00",
+            "Martes": "10:00-11:00",
+            "Miercoles": "10:00-11:00",
+            "Jueves": "10:00-11:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Cf1 / Taller De Etica",
+        "Profesor": "Pena Cruz Guadalupe Del Socorro",
+        "Grupo": "5",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "09:00-10:00",
+            "Martes": "09:00-10:00",
+            "Miercoles": "09:00-10:00",
+            "Jueves": "09:00-10:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Cf1 / Taller De Etica",
+        "Profesor": "Cardenas Aguirre Claudia Enriqueta",
+        "Grupo": "A",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "12:00-13:00",
+            "Martes": "12:00-13:00",
+            "Miercoles": "12:00-13:00",
+            "Jueves": "12:00-13:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Cf1 / Taller De Etica",
+        "Profesor": "Hernandez Garcia Nancy Fabiola",
+        "Grupo": "B",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "13:00-14:00",
+            "Martes": "13:00-14:00",
+            "Miercoles": "13:00-14:00",
+            "Jueves": "13:00-14:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Cf1 / Taller De Etica",
+        "Profesor": "Cardenas Aguirre Claudia Enriqueta",
+        "Grupo": "C",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "09:00-10:00",
+            "Martes": "09:00-10:00",
+            "Miercoles": "09:00-10:00",
+            "Jueves": "09:00-10:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Cf1 / Taller De Etica",
+        "Profesor": "Garcia Saavedra Carlos Itzcoatl",
+        "Grupo": "D",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "16:00-17:00",
+            "Martes": "16:00-17:00",
+            "Miercoles": "16:00-17:00",
+            "Jueves": "16:00-17:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Cf1 / Taller De Etica",
+        "Profesor": "Cardenas Aguirre Claudia Enriqueta",
+        "Grupo": "E",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "11:00-12:00",
+            "Martes": "11:00-12:00",
+            "Miercoles": "11:00-12:00",
+            "Jueves": "11:00-12:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Df1 / Matematicas Discretas",
+        "Profesor": "Valdes Gonzalez Lucia Marisol",
+        "Grupo": "A",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "09:00-10:00",
+            "Martes": "09:00-10:00",
+            "Miercoles": "09:00-10:00",
+            "Jueves": "09:00-10:00",
+            "Viernes": "09:00-10:00"
+        }
+    },
+    {
+        "Materia": "Df1 / Matematicas Discretas",
+        "Profesor": "Valdes Gonzalez Lucia Marisol",
+        "Grupo": "B",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "10:00-11:00",
+            "Martes": "10:00-11:00",
+            "Miercoles": "10:00-11:00",
+            "Jueves": "10:00-11:00",
+            "Viernes": "10:00-11:00"
+        }
+    },
+    {
+        "Materia": "Df1 / Matematicas Discretas",
+        "Profesor": "Martinez Villafuerte Veronica",
+        "Grupo": "C",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "14:00-15:00",
+            "Martes": "14:00-15:00",
+            "Miercoles": "14:00-15:00",
+            "Jueves": "14:00-15:00",
+            "Viernes": "14:00-15:00"
+        }
+    },
+    {
+        "Materia": "Df1 / Matematicas Discretas",
+        "Profesor": "Valdes Gonzalez Lucia Marisol",
+        "Grupo": "D",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "12:00-13:00",
+            "Martes": "12:00-13:00",
+            "Miercoles": "12:00-13:00",
+            "Jueves": "12:00-13:00",
+            "Viernes": "12:00-13:00"
+        }
+    },
+    {
+        "Materia": "Df1 / Matematicas Discretas",
+        "Profesor": "Valdes Gonzalez Lucia Marisol",
+        "Grupo": "E",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "13:00-14:00",
+            "Martes": "13:00-14:00",
+            "Miercoles": "13:00-14:00",
+            "Jueves": "13:00-14:00",
+            "Viernes": "13:00-14:00"
+        }
+    },
+    {
+        "Materia": "Df1 / Matematicas Discretas",
+        "Profesor": "Martinez Villafuerte Veronica",
+        "Grupo": "R",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "13:00-14:00",
+            "Martes": "13:00-14:00",
+            "Miercoles": "13:00-14:00",
+            "Jueves": "13:00-14:00",
+            "Viernes": "13:00-14:00"
+        }
+    },
+    {
+        "Materia": "Ef1 / Taller De Administracion",
+        "Profesor": "Hernandez Santana Maria Antonieta",
+        "Grupo": "A",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "11:00-12:00",
+            "Martes": "11:00-12:00",
+            "Miercoles": "11:00-12:00",
+            "Jueves": "11:00-12:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Ef1 / Taller De Administracion",
+        "Profesor": "Gallegos Hernandez Elda Roxana",
+        "Grupo": "B",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "07:00-08:00",
+            "Martes": "07:00-08:00",
+            "Miercoles": "07:00-08:00",
+            "Jueves": "07:00-08:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Ef1 / Taller De Administracion",
+        "Profesor": "Hernandez Santana Maria Antonieta",
+        "Grupo": "C",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "10:00-11:00",
+            "Martes": "10:00-11:00",
+            "Miercoles": "10:00-11:00",
+            "Jueves": "10:00-11:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Ef1 / Taller De Administracion",
+        "Profesor": "Gongora Solis Juanita Elena",
+        "Grupo": "D",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "17:00-18:00",
+            "Martes": "17:00-18:00",
+            "Miercoles": "17:00-18:00",
+            "Jueves": "17:00-18:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Ef1 / Taller De Administracion",
+        "Profesor": "Sanchez Hernandez Laura Acacia",
+        "Grupo": "E",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "16:00-17:00",
+            "Martes": "16:00-17:00",
+            "Miercoles": "16:00-17:00",
+            "Jueves": "16:00-17:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Ef1 / Taller De Administracion",
+        "Profesor": "Escobar Martinez Iris Anahi",
+        "Grupo": "R",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "09:00-10:00",
+            "Martes": "09:00-10:00",
+            "Miercoles": "09:00-10:00",
+            "Jueves": "09:00-10:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Ff1 / Fundamentos De Investigacion",
+        "Profesor": "Vidal Vazquez Olga Lidia",
+        "Grupo": "A",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "08:00-09:00",
+            "Martes": "08:00-09:00",
+            "Miercoles": "08:00-09:00",
+            "Jueves": "08:00-09:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Ff1 / Fundamentos De Investigacion",
+        "Profesor": "Torres Oyervides Sandra Marisol",
+        "Grupo": "Af",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "07:00-08:00",
+            "Martes": "07:00-08:00",
+            "Miercoles": "07:00-08:00",
+            "Jueves": "07:00-08:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Ff1 / Fundamentos De Investigacion",
+        "Profesor": "Esquivel Lopez Laura Leticia",
+        "Grupo": "B",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "08:00-09:00",
+            "Martes": "08:00-09:00",
+            "Miercoles": "08:00-09:00",
+            "Jueves": "08:00-09:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Ff1 / Fundamentos De Investigacion",
+        "Profesor": "Gonzalez Martinez Alejandra Maria De Lourdes",
+        "Grupo": "Bg",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "09:00-10:00",
+            "Martes": "09:00-10:00",
+            "Miercoles": "09:00-10:00",
+            "Jueves": "09:00-10:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Ff1 / Fundamentos De Investigacion",
+        "Profesor": "Sorkee Quiroz Roxana Karina",
+        "Grupo": "C",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "12:00-13:00",
+            "Martes": "12:00-13:00",
+            "Miercoles": "12:00-13:00",
+            "Jueves": "12:00-13:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Ff1 / Fundamentos De Investigacion",
+        "Profesor": "Sorkee Quiroz Roxana Karina",
+        "Grupo": "Ch",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "11:00-12:00",
+            "Martes": "11:00-12:00",
+            "Miercoles": "11:00-12:00",
+            "Jueves": "11:00-12:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Ff1 / Fundamentos De Investigacion",
+        "Profesor": "Vidal Vazquez Olga Lidia",
+        "Grupo": "D",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "14:00-15:00",
+            "Martes": "14:00-15:00",
+            "Miercoles": "14:00-15:00",
+            "Jueves": "14:00-15:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Ff1 / Fundamentos De Investigacion",
+        "Profesor": "Sorkee Quiroz Roxana Karina",
+        "Grupo": "Di",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "13:00-14:00",
+            "Martes": "13:00-14:00",
+            "Miercoles": "13:00-14:00",
+            "Jueves": "13:00-14:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Ff1 / Fundamentos De Investigacion",
+        "Profesor": "Hernandez Calderon Carmen Melida",
+        "Grupo": "E",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "15:00-16:00",
+            "Martes": "15:00-16:00",
+            "Miercoles": "15:00-16:00",
+            "Jueves": "15:00-16:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Ff1 / Fundamentos De Investigacion",
+        "Profesor": "Sorkee Quiroz Roxana Karina",
+        "Grupo": "Ej",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "14:00-15:00",
+            "Martes": "14:00-15:00",
+            "Miercoles": "14:00-15:00",
+            "Jueves": "14:00-15:00",
+            "Viernes": null
+        }
+    },
+    {
+        "Materia": "Ff1 / Fundamentos De Investigacion",
+        "Profesor": "Mancinas Perez Liset",
+        "Grupo": "R",
+        "Semestre": "1",
+        "Horario": {
+            "Lunes": "09:00-10:00",
+            "Martes": "09:00-10:00",
+            "Miercoles": "09:00-10:00",
+            "Jueves": "09:00-10:00",
+            "Viernes": null
+        }
+    }
+]

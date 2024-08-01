@@ -12,7 +12,8 @@ class Scrap:
         words = text.split()
         if not words:
             return ''
-        return words[0].lower() + ' '.join(word.capitalize() for word in words[1:])
+        return ' '.join(word.capitalize() for word in words)
+
 
     def normalizeData(self, data):
         # Normalize the data
@@ -42,6 +43,7 @@ class Scrap:
         print(response.text)
 
     def getHorario(self, semestre):
+        print(f"Extrayendo datos de {semestre} semestre...")
         _token = 'MTLYLyxv3DDa9KLnPoFk00l19A5IhVENPcEcnnZf' #I'm not sure if this token is static or works by session
         form_data = {
             'semester': str(semestre),
@@ -54,6 +56,7 @@ class Scrap:
         self.parseToJson(data)
 
     def parseToJson(self, data):
+        print("Convirtiendo a JSON...")
         json_data = []
         for row in data:
             if len(row) >= 10:
@@ -78,6 +81,7 @@ class Scrap:
     def createJson(self, data):
         with open('data.json', 'w') as f:
             json.dump(data, f, indent=4)
+        print("Archivo data.json creado")
 
     def notValidCookie(self):
         print("Las cookies dadas no son validas, favor de revisarlas")
