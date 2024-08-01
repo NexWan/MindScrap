@@ -11,13 +11,13 @@ python -m venv env
 ### LINUX o Macos
 Para activar el entorno virtual en linux usa el siguiente comando:
 ```sh
-source env/bin/activate
+source env/Scripts/activate
 ```
 
 ### WINDOWS
 En windows utiliza el siguiente comando
 ```sh
-source env/bin/activate
+./env/Source/activate
 ```
 
 Una vez activado tu entorno virtual utiliza el siguiente comando para instalar las librerias utilizadas:
