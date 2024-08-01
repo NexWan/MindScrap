@@ -1,11 +1,32 @@
 import json
+import os
 
 class Utils:
     def __init__(self) -> None:
         pass
 
+    def printNotExistingMessage(self):
+        print("\033c", end="")
+        print("No existe el archivo cookies.json")
+        print("A continuacion se creara el archivo cookies.json")
+
+    def printFileEmptyMessage(self):
+        print("\033c", end="")
+        print("El archivo cookies.json esta vacio o no contiene las cookies necesarias")
+        print("Por favor, ingresa las cookies de Mindbox en el archivo cookies.json")
+        print("Si no estas seguro de como obtener las cookies, visita el siguiente enlace: \033]8;;https://github.com/NexWan/MindScrap\033\\https://github.com/NexWan/MindScrap\033]8;;\033\\")
+        exit(0)
+
     def checkCookiesFile(self):
         # Check if the cookies file exists
+        if not os.path.exists('cookies.json'):
+            self.printNotExistingMessage()
+            self.initConfig()
+            return False
+        # Check if the cookies file is empty
+        if os.path.getsize('cookies.json') == 0:
+            self.printFileEmptyMessage()
+            return False
         try:
             with open('cookies.json', 'r') as f:
                 cookies = json.load(f)
@@ -15,6 +36,8 @@ class Utils:
                 if token and xsrf and session:
                     return True
                 else:
+                    self.printFileEmptyMessage()
+                    exit(0)
                     return False
         except:
             return False
@@ -22,6 +45,8 @@ class Utils:
     def initConfig(self):
         # Initialize the configuration
         open('cookies.json', 'w').close()
-        print("Archivo de configuracion creado")
+        path = os.path.abspath('cookies.json')
+        print(f"Archivo de cookies creado en {path}")
         print("Por favor, ingresa las cookies de Mindbox en el archivo cookies.json")
+        print("Si no estas seguro de como obtener las cookies, visita el siguiente enlace: \033]8;;https://github.com/NexWan/MindScrap\033\\https://github.com/NexWan/MindScrap\033]8;;\033\\")
         exit(0)

@@ -79,11 +79,18 @@ class Scrap:
         with open('data.json', 'w') as f:
             json.dump(data, f, indent=4)
 
+    def notValidCookie(self):
+        print("Las cookies dadas no son validas, favor de revisarlas")
+        print("Si tienes dudas de como obtener las cookies, visita el siguiente enlace: \033]8;;https://github.com/NexWan/MindScrap\033\\https://github.com/NexWan/MindScrap\033]8;;\033\\")
+        print("Saliendo...")
+        exit(0)
+
     def extractTableData(self, html_content):
         soup = BeautifulSoup(html_content, 'html.parser')
         # Find the table with the specified class
         table = soup.find('table', class_='table table-bordered table-striped default')
         if not table:
+            self.notValidCookie()
             print("Table not found")
             return []
         table_data = []
