@@ -42,9 +42,16 @@ class Scrap:
         response = req.get(self.url, cookies=cookies)
         print(response.text)
 
+    def getSearchToken(self):
+        with open('cookies.json', 'r') as f:
+            cookies = json.load(f)
+            token = cookies.get('_token')
+            return token
+        return None
+
     def getHorario(self, semestre):
         print(f"Extrayendo datos de {semestre} semestre...")
-        _token = 'MTLYLyxv3DDa9KLnPoFk00l19A5IhVENPcEcnnZf' #I'm not sure if this token is static or works by session
+        _token = self.getSearchToken() #I'm not sure if this token is static or works by session
         form_data = {
             'semester': str(semestre),
             '_token': _token

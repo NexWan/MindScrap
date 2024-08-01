@@ -45,12 +45,16 @@ En las herramientas de desarrollador tendras que irte a el apartado de storage (
 ![alt text](gitImgs/cookies1.png)  
 (solo dale doble click en donde dice value/valor y copialo cada uno).
 
-4. <b>Ponerlas en config.json</b>
+4. <b>Obtener el id de busqueda</b>  
+Este paso es muy importante ya que la busqueda/request requiere de un token algo escondido, lo que tienes que hacer es meterte a el apartado de grupos disponibles, y abrir el inspeccionador de elemento de nuevo para obtener este token.
+![alt text](gitImgs/token.png)
+
+5. <b>Ponerlas en config.json</b>
 
 Si es la primera vez que ejecutas el script, deberia generarte un archivo en la carpeta raiz del programa, se llamara 'cookies.json', ahi pondras las cookies de la siguiente forma:
 ![alt text](gitImgs/cookies2.png)
 
-5. <b> Ejecutar el programa </b>
+6. <b> Ejecutar el programa </b>
 
 Ahora solo bastaria correr el script con el comando 
 ```sh

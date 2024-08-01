@@ -46,6 +46,14 @@ class Utils:
         # Initialize the configuration
         open('cookies.json', 'w').close()
         path = os.path.abspath('cookies.json')
+        toWrite = {
+            "INGRESSCOOKIE": "",
+            "XSRF-TOKEN": "",
+            "mbid_11_session": "",
+            "_token": ""
+        }
+        with open('cookies.json', 'w') as f:
+            json.dump(toWrite, f, indent=4)
         print(f"Archivo de cookies creado en {path}")
         print("Por favor, ingresa las cookies de Mindbox en el archivo cookies.json")
         print("Si no estas seguro de como obtener las cookies, visita el siguiente enlace: \033]8;;https://github.com/NexWan/MindScrap\033\\https://github.com/NexWan/MindScrap\033]8;;\033\\")
