@@ -1,6 +1,7 @@
 import scrap as sc
 from colors import *
 from utils import *
+import time
 
 def printWelcome2():
     # Secuencia de escape ANSI para limpiar la consola
@@ -40,11 +41,110 @@ def printWelcome():
     print(welcomeMessage)
     print(f"Bienvenido a MindScrap, programa para convertir los horarios de la pagina Mindbox a JSON (ITS)")
 
+def generarHorario(sc):
+    print ("""
+    Teclea los semestres de las materias que deseas obtener el horario.
+    Asegurate de seleccionarlos separados por comas y sin espacios. (Ejemplo: 1,2,3,4)
+           1. 1er Semestre 2. 2do Semestre 3. 3er Semestre 4. 4to Semestre
+           5. 5to Semestre 6. 6to Semestre 7. 7mo Semestre 8. 8vo Semestre
+    """)
+    semestres = input("Semestres: ")
+    if not validarSemestres(semestres):
+        print("Por favor, ingresa los semestres correctamente")
+        return
+    semestres = semestres.split(",")
+    print("Obteniendo las materias de los semestres seleccionados...")
+    materias = sc.getSubjectsBySemesters(semestres)
+    materiasGrupo = sc.groupGroups(materias)
+    
+    materiasSeleccionadas = seleccionarMaterias(materiasGrupo)
+    materiasFinal = []
+    print("A continuacion, se mostraran las materias de los semestres seleccionados, se mostraran materia por materia")
+    time.sleep(2)
+    for nombre, materias in materiasGrupo.items():
+        if nombre in [materia['Materia'] for materia in materiasSeleccionadas]:
+            print(f"\n{colors.pink_color}A continuacion se mostraran los grupos disponibles de la materia {nombre}{colors.reset_color}")
+            for materia in materias:
+                print(f"\n\n{colors.yellow_color}Materia: {nombre}{colors.reset_color}")
+                print(f"ID: {materia['ID']}")
+                print(f"Profesor: {materia['Profesor']}")
+                print(f"Semestre: {materia['Semestre']}")
+                print(f"Horario: {materia['Horario']}")
+            # Permitir al usuario seleccionar una materia específica por su índice
+            selected_index = input("\nIngresa el índice de la materia que deseas seleccionar o presiona Enter para continuar: ")
+            if selected_index.isdigit():
+                selected_index = int(selected_index)
+                if 0 <= selected_index <= len(materias):
+                    print(f"Seleccionaste la opcion {selected_index}")
+                    materiasFinal.append(materias[selected_index-1])
+                else:
+                    print("Índice no válido. Por favor, intenta de nuevo.")
+            input("Presiona enter para continuar")
+            print("\033c", end="")
+    # Resetear la consola
+    print("\033c", end="")
+    print("Estas son las materias seleccionadas")
+    for materia in materiasFinal:
+        print(f"\n{colors.yellow_color}Materia: {materia['Materia']}{colors.reset_color}")
+        print(f"Profesor: {materia['Profesor']}")
+        print(f"Semestre: {materia['Semestre']}")
+        print(f"Horario: {materia['Horario']}")
+
+def seleccionarMaterias(grupoMaterias):
+    print("\033c", end="")
+    materias_unicas = {}
+    for nombre, materias in grupoMaterias.items():
+        for materia in materias:
+            if materia['Materia'] not in materias_unicas:
+                materias_unicas[materia['Materia']] = materia['Semestre']
+    
+    print("A continuacion, se mostraran las materias de los semestres seleccionados")
+    for i, (materia, semestre) in enumerate(materias_unicas.items()):
+        print(f"{i}. {materia} - Semestre: {semestre}")
+    print(f"{colors.pink_color}Selecciona las materias que te gustaria cursar (Maximo 7) separadas por comas{colors.reset_color}")
+    materias_seleccionadas = input("Materias: ")
+    materias_seleccionadas = materias_seleccionadas.split(",")
+    if len(materias_seleccionadas) > 7:
+        print("Solo puedes seleccionar 7 materias")
+        return
+    materias_finales = {}
+    for index in materias_seleccionadas:
+        if index.isdigit():
+            index = int(index)
+            if 0 <= index < len(materias_unicas):
+                materia = list(materias_unicas.keys())[index]
+                semestre = materias_unicas[materia]
+                materias_finales[materia] = {'Materia': materia, 'Semestre': semestre}
+            else:
+                print(f"Índice {index} fuera de rango. Por favor, intenta de nuevo.")
+                return
+        else:
+            print(f"Entrada no válida: {index}. Por favor, ingresa números separados por comas.")
+            return
+    print("Materias seleccionadas:")
+    for materia, detalles in materias_finales.items():
+        print(f"{detalles['Materia']} - Semestre: {detalles['Semestre']}")
+        print("\n")
+    print(f"{colors.pink_color}Materias seleccionadas correctamente{colors.reset_color}")
+    #Resetear la consola
+    print("\033c", end="")
+    return list(materias_finales.values())
+    
+
+def validarSemestres(semestres):
+    semestres = semestres.split(",")
+    for semestre in semestres:
+        if not semestre.isdigit():
+            print(f"El semestre {semestre} no es valido")
+            return False
+    return True
+
 def getInput():
     print("\n Menu:")
     print("1. Obtener horario")
-    print("2. Instrucciones")
-    print("3. Salir")
+    print("2. Generar horario")
+    print("3. Instrucciones")
+    print("4. Salir")
     return input("Selecciona una opcion: ")
 
 def printInstructions():
@@ -71,8 +171,11 @@ def __main__():
             scrapper.getHorario(semestre)
         elif option == '2':
             print("\033c", end="")
-            printInstructions()
+            generarHorario(scrapper)
         elif option == '3':
+            print("\033c", end="")
+            printInstructions()
+        elif option == '4':
             # Secuencia de escape ANSI para limpiar la consola
             print("\033c", end="")
             print("Bye bye")

@@ -3,3 +3,4 @@ class colors:
     reset_color = "\033[0m"
     green_color = "\033[32m"
     red_color =  "\033[31"
+    yellow_color = "\033[33m"

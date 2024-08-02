@@ -62,13 +62,17 @@ class Scrap:
         data = self.extractTableData(response.text)
         self.parseToJson(data)
     
-    def parseToJson(self, data):
+    def parseToJson(self, data, createFile=True):
         print("Convirtiendo a JSON...")
         json_data = []
         for row in data:
             if len(row) >= 10:
+                # Dividir la cadena en el carácter '/'
+                materia_parts = row[1].split('/')
+                # Asignar la parte después del '/' a la variable 'materia'
+                materia = materia_parts[1].strip() if len(materia_parts) > 1 else row[1].strip()
                 json_row = {
-                    "Materia": f"{row[0]} {row[1]}",
+                    "Materia": materia,
                     "Profesor": row[2],
                     "Grupo": row[3],
                     "Semestre": row[4],
@@ -83,7 +87,10 @@ class Scrap:
                 json_data.append(json_row)
         # Print or process the JSON data
         json_output = json.dumps(json_data, indent=4, ensure_ascii=False)
-        self.createJson(json_data)
+        if(createFile):
+            self.createJson(json_data)
+        else:
+            return json_data
 
     def createJson(self, data):
         with open('data.json', 'w') as f:
@@ -127,3 +134,51 @@ class Scrap:
             if row_data:
                 table_data.append(row_data)
         return table_data
+    
+    def fetchSubjects(self, semester):
+        cookies = self.getCookies()
+        form_data = {
+            'semester': semester,
+            '_token': self.getSearchToken()
+        }
+        response = req.post(self.url, cookies=cookies, data=form_data)
+        html_content = self.extractTableData(response.text)
+        json = self.parseToJson(html_content, False)
+        return json
+
+    def getSubjectsBySemesters(self, semesters):
+        subjects = []
+        for semestre in semesters:
+            subjects.extend(self.fetchSubjects(semestre))  # Asegúrate de extender la lista
+        return self.groupSubjects(subjects)
+    
+    def groupSubjects(self, subjects):
+        # Crear un diccionario para agrupar las materias por nombre
+        grouped_subjects = {}
+        for subject in subjects:
+            materia = subject['Materia']
+            if materia not in grouped_subjects:
+                grouped_subjects[materia] = []
+            grouped_subjects[materia].append(subject)
+        # Crear una lista para guardar los resultados con identificadores
+        result = []
+        for materia, subjects in grouped_subjects.items():
+            for idx, subject in enumerate(subjects, start=1):
+                subject_with_id = {
+                    "ID": idx,
+                    "Materia": subject['Materia'],
+                    "Profesor": subject['Profesor'],
+                    "Horario": subject['Horario'],
+                    "Semestre": subject['Semestre']
+                }
+                result.append(subject_with_id)
+        return result
+    
+    def groupGroups(self, groups):
+        grouped_groups = {}
+        for group in groups:
+            materia = group['Materia']
+            if materia not in grouped_groups:
+                grouped_groups[materia] = []
+            grouped_groups[materia].append(group)
+        return grouped_groups
