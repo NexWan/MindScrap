@@ -88,7 +88,7 @@ def generarHorario(sc):
     hilo_cargando.join()
     print(f"{colors.pink_color}Se generaron {len(combinaciones)} combinaciones de horarios{colors.reset_color}")
     for i, combinacion in enumerate(combinaciones):
-        print(f"\n{colors.yellow_color}Combinacion {i+1}{colors.reset_color}")
+        print(f"\n{colors.pink_color}Combinacion {i+1}{colors.reset_color}")
         for materia in combinacion:
             print(f"\n{colors.yellow_color}Materia: {materia['Materia']}{colors.reset_color}")
             print(f"Profesor: {materia['Profesor']}")

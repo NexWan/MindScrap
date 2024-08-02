@@ -87,18 +87,20 @@ class Utils:
         return False
 
     def genCombinations(self, materias, num_materias):
-        def backtrack(actual, index):
+        def backtrack(actual, index, used):
             if len(actual) == num_materias:
                 combinations.append(actual[:])
                 return
             if index == len(materias):
                 return
             for i in range(index, len(materias)):
-                if not self.overlapseWithSome(materias[i]["Horario"], [h["Horario"] for h in actual]):
+                if materias[i]["Materia"] not in used and not self.overlapseWithSome(materias[i]["Horario"], [h["Horario"] for h in actual]):
                     actual.append(materias[i])
-                    backtrack(actual, i + 1)
+                    used.add(materias[i]["Materia"])
+                    backtrack(actual, i + 1, used)
                     actual.pop()
+                    used.remove(materias[i]["Materia"])
 
         combinations = []
-        backtrack([], 0)
+        backtrack([], 0, set())
         return combinations
