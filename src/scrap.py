@@ -54,7 +54,7 @@ class Scrap:
         response = req.post(self.url, cookies=cookies, data=form_data)
         data = self.extractTableData(response.text)
         self.parseToJson(data)
-
+    
     def parseToJson(self, data):
         print("Convirtiendo a JSON...")
         json_data = []

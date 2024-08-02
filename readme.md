@@ -2,6 +2,14 @@
 
 Esta herramienta esta hecha para poder scrappear la informacion respecto a los horarios en la pagina mindbox https://itsaltillo.mindbox.app
 
+## INDEX  
+
+- [Como usarla](#como-usarla)
+    - [Linux o MacOs](#linux-o-macos)
+    - [Windows](#windows)
+- [Configuracion](#configuracion)
+- [Ejemplo](#ejemplo)
+
 ## COMO USARLA
 
 Para empezar tendras que tener instalado Python, despues tendras que crear un entorno virtual (venv)
