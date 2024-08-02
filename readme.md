@@ -93,3 +93,6 @@ python src/main.py
 ## EJEMPLO
 
 Si quieres ver un ejemplo de como almacena la informacion ve a el siguiente [enlace](example/example.json)
+
+### Ejemplo de uso para generar horario
+![placeholder](example/terminal.gif)
