@@ -187,9 +187,17 @@ def getInput():
 def printInstructions():
     instrucciones = """
     Instrucciones:
+OPCION 1: Esta opcion lo unico que hace es generar un JSON con las materias del semestre que ingreses
 1. Asegurate que el archivo cookies.json tenga las cookies de Mindbox
 2. Ingresa el semestre que deseas obtener el horario
 3. El programa generara un archivo data.json con el horario
+
+OPCION 2: Esta opcion genera todas las combinaciones posibles de horarios con las materias que selecciones
+1. Asegurate que el archivo cookies.json tenga las cookies de Mindbox
+2. Ingresa los semestres de las materias que deseas obtener el horario
+3. Selecciona las materias que deseas cursar
+4. Selecciona los grupos de las materias seleccionadas
+5. El programa generara todas las combinaciones posibles de horarios
 
 Si no estas seguro de como obtener las cookies, visita el siguiente enlace: \033]8;;https://github.com/NexWan/MindScrap\033\\https://github.com/NexWan/MindScrap\033]8;;\033\\
     """
