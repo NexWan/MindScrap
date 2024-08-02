@@ -13,6 +13,8 @@ Esta herramienta esta hecha para poder scrappear la informacion respecto a los h
 
 ## GENERAR TU HORARIO  
 
+PRIMERO TIENES QUE SEGUIR LOS PASOS DE [Como usarla](#como-usarla).
+
 Para poder generar tu horario necesitaras primero asegurarte de tener la configuracion adecuada
 (checa [Configuracion](#configuracion)).  
 Una vez que estes seguro tienes que seleccionar la opcion numero 2 de el menu de la interfaz.  
@@ -22,6 +24,14 @@ Seguido de esto deberas de elegir las materias de ciertos semestres que quieres 
 A partir de aqui tendras que seleccionarlos como indica el programa y si todo sale bien te saldran las combinaciones.
 
 ## COMO USARLA
+
+Tienes que tener Python instalado y git.
+
+Con git metete a cualquier carpeta y solamente clona el repositorio
+```sh
+git clone https://github.com/NexWan/MindScrap
+```  
+
 
 Para empezar tendras que tener instalado Python, despues tendras que crear un entorno virtual (venv)
 ```sh
