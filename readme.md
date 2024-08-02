@@ -10,6 +10,17 @@ Esta herramienta esta hecha para poder scrappear la informacion respecto a los h
 - [Configuracion](#configuracion)
 - [Ejemplo](#ejemplo)
 
+
+## GENERAR TU HORARIO  
+
+Para poder generar tu horario necesitaras primero asegurarte de tener la configuracion adecuada
+(checa [Configuracion](#configuracion)).  
+Una vez que estes seguro tienes que seleccionar la opcion numero 2 de el menu de la interfaz.  
+A continuacion habran varias opciones, tendras que primero seleccionar los semestres de donde quieres elegir materias.
+Seguido de esto deberas de elegir las materias de ciertos semestres que quieres elegir, una vez hecho eso te saldran todas las opciones con los grupos disponibles.
+
+A partir de aqui tendras que seleccionarlos como indica el programa y si todo sale bien te saldran las combinaciones.
+
 ## COMO USARLA
 
 Para empezar tendras que tener instalado Python, despues tendras que crear un entorno virtual (venv)
