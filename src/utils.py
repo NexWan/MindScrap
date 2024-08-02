@@ -1,5 +1,8 @@
 import json
 import os
+import itertools
+import sys
+import time
 
 class Utils:
     def __init__(self) -> None:
@@ -58,3 +61,44 @@ class Utils:
         print("Por favor, ingresa las cookies de Mindbox en el archivo cookies.json")
         print("Si no estas seguro de como obtener las cookies, visita el siguiente enlace: \033]8;;https://github.com/NexWan/MindScrap\033\\https://github.com/NexWan/MindScrap\033]8;;\033\\")
         exit(0)
+
+    def mostrar_cargando(stop_event):
+        for simbolo in itertools.cycle(['|', '/', '-', '\\']):
+            if stop_event.is_set():
+                break
+            sys.stdout.write(f'\rCargando {simbolo}')
+            sys.stdout.flush()
+            time.sleep(0.1)
+        sys.stdout.write('\rListo!     \n')
+
+    def generateSchedule(materias_seleccionadas):
+        return None
+    
+    def preventOverlapse(self, time1, time2):
+        start1, end1 = time1.split('-')
+        start2, end2 = time2.split('-')
+        return not (end1 <= start2 or end2 <= start1)
+
+    def overlapseWithSome(self, schedule, schedules):
+        for s in schedules:
+            for day in schedule:
+                if schedule[day] and s[day] and self.preventOverlapse(schedule[day], s[day]):
+                    return True
+        return False
+
+    def genCombinations(self, materias, num_materias):
+        def backtrack(actual, index):
+            if len(actual) == num_materias:
+                combinations.append(actual[:])
+                return
+            if index == len(materias):
+                return
+            for i in range(index, len(materias)):
+                if not self.overlapseWithSome(materias[i]["Horario"], [h["Horario"] for h in actual]):
+                    actual.append(materias[i])
+                    backtrack(actual, i + 1)
+                    actual.pop()
+
+        combinations = []
+        backtrack([], 0)
+        return combinations

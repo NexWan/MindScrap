@@ -2,6 +2,7 @@ import scrap as sc
 from colors import *
 from utils import *
 import time
+import threading
 
 def printWelcome2():
     # Secuencia de escape ANSI para limpiar la consola
@@ -54,41 +55,77 @@ def generarHorario(sc):
         return
     semestres = semestres.split(",")
     print("Obteniendo las materias de los semestres seleccionados...")
+    stop_event = threading.Event()
+    hilo_cargando = threading.Thread(target=Utils.mostrar_cargando, args=(stop_event,))
+    hilo_cargando.start()
     materias = sc.getSubjectsBySemesters(semestres)
     materiasGrupo = sc.groupGroups(materias)
+
+    stop_event.set()
+    hilo_cargando.join()
     
     materiasSeleccionadas = seleccionarMaterias(materiasGrupo)
-    materiasFinal = []
-    print("A continuacion, se mostraran las materias de los semestres seleccionados, se mostraran materia por materia")
-    time.sleep(2)
-    for nombre, materias in materiasGrupo.items():
-        if nombre in [materia['Materia'] for materia in materiasSeleccionadas]:
-            print(f"\n{colors.pink_color}A continuacion se mostraran los grupos disponibles de la materia {nombre}{colors.reset_color}")
-            for materia in materias:
-                print(f"\n\n{colors.yellow_color}Materia: {nombre}{colors.reset_color}")
-                print(f"ID: {materia['ID']}")
-                print(f"Profesor: {materia['Profesor']}")
-                print(f"Semestre: {materia['Semestre']}")
-                print(f"Horario: {materia['Horario']}")
-            # Permitir al usuario seleccionar una materia específica por su índice
-            selected_index = input("\nIngresa el índice de la materia que deseas seleccionar o presiona Enter para continuar: ")
-            if selected_index.isdigit():
-                selected_index = int(selected_index)
-                if 0 <= selected_index <= len(materias):
-                    print(f"Seleccionaste la opcion {selected_index}")
-                    materiasFinal.append(materias[selected_index-1])
-                else:
-                    print("Índice no válido. Por favor, intenta de nuevo.")
-            input("Presiona enter para continuar")
-            print("\033c", end="")
+    numMaterias = len(materiasSeleccionadas)
+    print("A continuacion, se mostraran los grupos de las materias seleccionadas, se mostraran por materia")
+    time.sleep(3)
+    print("\033c", end="")
+    materiasFinal = seleccionarMateriasConGrupos(materiasSeleccionadas, materiasGrupo)
     # Resetear la consola
     print("\033c", end="")
-    print("Estas son las materias seleccionadas")
+    print(f"{colors.pink_color}Estas son las materias seleccionadas{colors.reset_color}")
     for materia in materiasFinal:
         print(f"\n{colors.yellow_color}Materia: {materia['Materia']}{colors.reset_color}")
         print(f"Profesor: {materia['Profesor']}")
         print(f"Semestre: {materia['Semestre']}")
         print(f"Horario: {materia['Horario']}")
+    print(f"{colors.pink_color}A continuacion se generaran las posibles combinaciones de horarios{colors.reset_color}")
+    print("Esto puede tardar un poco, por favor espera...")
+    stop_event = threading.Event()
+    hilo_cargando = threading.Thread(target=Utils.mostrar_cargando, args=(stop_event,))
+    hilo_cargando.start()
+    combinaciones = Utils().genCombinations(materiasFinal, numMaterias)
+    stop_event.set()
+    hilo_cargando.join()
+    print(f"{colors.pink_color}Se generaron {len(combinaciones)} combinaciones de horarios{colors.reset_color}")
+    for i, combinacion in enumerate(combinaciones):
+        print(f"\n{colors.yellow_color}Combinacion {i+1}{colors.reset_color}")
+        for materia in combinacion:
+            print(f"\n{colors.yellow_color}Materia: {materia['Materia']}{colors.reset_color}")
+            print(f"Profesor: {materia['Profesor']}")
+            print(f"Semestre: {materia['Semestre']}")
+            print(f"Horario: {materia['Horario']}")
+
+
+def seleccionarMateriasConGrupos(materiasSeleccionadas, materiasGrupo):
+    materiasFinal = []
+    for nombre, materias in materiasGrupo.items():
+        if nombre in [materia['Materia'] for materia in materiasSeleccionadas]:
+            print(f"\n{colors.pink_color}Grupos disponibles de la materia {nombre}{colors.reset_color}")
+            for i, materia in enumerate(materias, start=1):
+                print(f"\n\n{colors.yellow_color}Materia: {nombre}{colors.reset_color}")
+                print(f"ID: {materia['ID']}")
+                print(f"Profesor: {materia['Profesor']}")
+                print(f"Semestre: {materia['Semestre']}")
+                print(f"Horario: {materia['Horario']}")
+                print(f"Índice: {i}")
+            
+            selected_indices = input("\nIngresa los índices de las materias que deseas seleccionar, separados por comas, o presiona Enter para continuar: ")
+            if selected_indices:
+                selected_indices = selected_indices.split(',')
+                for selected_index in selected_indices:
+                    if selected_index.isdigit():
+                        selected_index = int(selected_index)
+                        if 1 <= selected_index <= len(materias):
+                            print(f"Seleccionaste la opción {selected_index}")
+                            materiasFinal.append(materias[selected_index-1])
+                        else:
+                            print(f"Índice {selected_index} no válido. Por favor, intenta de nuevo.")
+                    else:
+                        print(f"Entrada no válida: {selected_index}. Por favor, ingresa números separados por comas.")
+            input("Presiona enter para continuar")
+            print("\033c", end="")
+    return materiasFinal
+
 
 def seleccionarMaterias(grupoMaterias):
     print("\033c", end="")
