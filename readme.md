@@ -4,11 +4,13 @@ Esta herramienta esta hecha para poder scrappear la informacion respecto a los h
 
 ## INDEX  
 
+- [Generar horario](#generar-tu-horario)
 - [Como usarla](#como-usarla)
     - [Linux o MacOs](#linux-o-macos)
     - [Windows](#windows)
 - [Configuracion](#configuracion)
 - [Ejemplo](#ejemplo)
+- [Por hacer](#por-hacer)
 
 
 ## GENERAR TU HORARIO  
@@ -98,3 +100,9 @@ Ejemplo de el formato de horario que genera de momento en JSON: [enlace](example
 
 ### Ejemplo de uso para generar horario
 ![placeholder](example/terminal.gif)
+
+
+## POR HACER
+
+- Hacer que el formato final sea en PDF (de momento es un JSON)
+- Migrarlo a pagina web (No se si lo vaya a hacer xd)
