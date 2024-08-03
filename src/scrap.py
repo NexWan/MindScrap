@@ -3,6 +3,7 @@ import json
 from bs4 import BeautifulSoup
 from unidecode import unidecode
 import re
+import time
 
 class Scrap:
     def __init__(self, url):
@@ -66,6 +67,7 @@ class Scrap:
         print("Convirtiendo a JSON...")
         json_data = []
         for row in data:
+            print(row)
             if len(row) >= 10:
                 # Dividir la cadena en el carácter '/'
                 materia_parts = row[1].split('/')
@@ -77,11 +79,11 @@ class Scrap:
                     "Grupo": row[3],
                     "Semestre": row[4],
                     "Horario": {
-                        "Lunes": row[5],
-                        "Martes": row[7],
-                        "Miercoles": row[9],
-                        "Jueves": row[11],
-                        "Viernes": row[13] if len(row) > 13 else None
+                        "Lunes": row[5] if len(row) > 5 and row[5].strip() != "" else None,
+                        "Martes": row[6] if len(row) > 6 and row[6].strip() != "" else None,
+                        "Miercoles": row[7] if len(row) > 7 and row[7].strip() != "" else None,
+                        "Jueves": row[8] if len(row) > 8 and row[8].strip() != "" else None,
+                        "Viernes": row[9] if len(row) > 9 and row[9].strip() != "" else None,
                     }
                 }
                 json_data.append(json_row)
@@ -111,6 +113,7 @@ class Scrap:
             self.notValidCookie()
             print("Table not found")
             return []
+        
         table_data = []
         # Iterate through each row in the table
         for row in table.find_all('tr'):
@@ -118,21 +121,28 @@ class Scrap:
             # Iterate through each cell in the row
             for cell in row.find_all('td'):
                 cell_text_parts = []
+                print(cell)
+                childrenSize = (len(list(cell.children)))
                 # Collect text parts separately
                 for element in cell.children:
+                    if childrenSize == 1 and element.strip() == '': # If there's only one child, it's a string
+                        cell_text_parts.append(" ")
                     if element.name == 'br':
                         continue  # Skip <br> tags
                     elif element.name == 'small':
+                        if '/' in element.get_text(strip=True): continue
                         cell_text_parts.append(self.normalizeData(element.get_text(strip=True)))
-                    elif isinstance(element, str):
+                    elif isinstance(element, str) and element.strip() != '':
+                        print(f"String: {element}")
                         cell_text_parts.append(self.normalizeData(element.strip()))
                     else:
                         cell_text_parts.append(self.normalizeData(element.get_text(strip=True)))
-                # Append each part as a separate value in the row_data list
+                # Join the parts to form the complete cell text
                 for part in filter(None, cell_text_parts):
-                    row_data.append(part)
+                        row_data.append(part)
             if row_data:
                 table_data.append(row_data)
+        
         return table_data
     
     def fetchSubjects(self, semester):
