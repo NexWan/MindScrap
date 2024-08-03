@@ -1,0 +1,482 @@
+{
+    "Horario 1": [
+        {
+            "ID": 3,
+            "Materia": "Lenguajes Y Automatas Ii",
+            "Profesor": "Cabrera Chagoyan Karina",
+            "Horario": {
+                "Lunes": "12:00-13:00",
+                "Martes": "12:00-13:00",
+                "Miercoles": "12:00-13:00",
+                "Jueves": "12:00-13:00",
+                "Viernes": "12:00-13:00"
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 3,
+            "Materia": "Administracion De Redes",
+            "Profesor": "Mendoza Morales Sergio Arturo",
+            "Horario": {
+                "Lunes": "13:00-14:00",
+                "Martes": "13:00-14:00",
+                "Miercoles": "13:00-14:00",
+                "Jueves": "13:00-14:00",
+                "Viernes": null
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 1,
+            "Materia": "Inteligencia Artificial",
+            "Profesor": "Castanuela Fuentes Luis Enrique",
+            "Horario": {
+                "Lunes": "09:00-10:00",
+                "Martes": "09:00-10:00",
+                "Miercoles": "09:00-10:00",
+                "Jueves": "09:00-10:00",
+                "Viernes": null
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 3,
+            "Materia": "Taller De Investigacion Ii",
+            "Profesor": "Moreno Rubio Judith Magaly",
+            "Horario": {
+                "Lunes": "17:00-18:00",
+                "Martes": "17:00-18:00",
+                "Miercoles": "17:00-18:00",
+                "Jueves": "17:00-18:00",
+                "Viernes": null
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 1,
+            "Materia": "Ingenieria De Software",
+            "Profesor": "Fernandez Chavez Eduardo",
+            "Horario": {
+                "Lunes": "14:00-15:00",
+                "Martes": "14:00-15:00",
+                "Miercoles": "14:00-15:00",
+                "Jueves": "14:00-15:00",
+                "Viernes": "14:00-15:00"
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 2,
+            "Materia": "Gestion De Proyectos De Software",
+            "Profesor": "Vazquez Esquivel Ana Laura",
+            "Horario": {
+                "Lunes": "19:00-20:00",
+                "Martes": "19:00-20:00",
+                "Miercoles": "19:00-20:00",
+                "Jueves": "19:00-20:00",
+                "Viernes": "18:00-20:00"
+            },
+            "Semestre": "7"
+        }
+    ],
+    "Horario 2": [
+        {
+            "ID": 3,
+            "Materia": "Lenguajes Y Automatas Ii",
+            "Profesor": "Cabrera Chagoyan Karina",
+            "Horario": {
+                "Lunes": "12:00-13:00",
+                "Martes": "12:00-13:00",
+                "Miercoles": "12:00-13:00",
+                "Jueves": "12:00-13:00",
+                "Viernes": "12:00-13:00"
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 3,
+            "Materia": "Administracion De Redes",
+            "Profesor": "Mendoza Morales Sergio Arturo",
+            "Horario": {
+                "Lunes": "13:00-14:00",
+                "Martes": "13:00-14:00",
+                "Miercoles": "13:00-14:00",
+                "Jueves": "13:00-14:00",
+                "Viernes": null
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 1,
+            "Materia": "Inteligencia Artificial",
+            "Profesor": "Castanuela Fuentes Luis Enrique",
+            "Horario": {
+                "Lunes": "09:00-10:00",
+                "Martes": "09:00-10:00",
+                "Miercoles": "09:00-10:00",
+                "Jueves": "09:00-10:00",
+                "Viernes": null
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 3,
+            "Materia": "Taller De Investigacion Ii",
+            "Profesor": "Moreno Rubio Judith Magaly",
+            "Horario": {
+                "Lunes": "17:00-18:00",
+                "Martes": "17:00-18:00",
+                "Miercoles": "17:00-18:00",
+                "Jueves": "17:00-18:00",
+                "Viernes": null
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 3,
+            "Materia": "Ingenieria De Software",
+            "Profesor": "Hernandez Calderon Carmen Melida",
+            "Horario": {
+                "Lunes": "16:00-17:00",
+                "Martes": "16:00-17:00",
+                "Miercoles": "16:00-17:00",
+                "Jueves": "16:00-17:00",
+                "Viernes": "16:00-17:00"
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 2,
+            "Materia": "Gestion De Proyectos De Software",
+            "Profesor": "Vazquez Esquivel Ana Laura",
+            "Horario": {
+                "Lunes": "19:00-20:00",
+                "Martes": "19:00-20:00",
+                "Miercoles": "19:00-20:00",
+                "Jueves": "19:00-20:00",
+                "Viernes": "18:00-20:00"
+            },
+            "Semestre": "7"
+        }
+    ],
+    "Horario 3": [
+        {
+            "ID": 3,
+            "Materia": "Lenguajes Y Automatas Ii",
+            "Profesor": "Cabrera Chagoyan Karina",
+            "Horario": {
+                "Lunes": "12:00-13:00",
+                "Martes": "12:00-13:00",
+                "Miercoles": "12:00-13:00",
+                "Jueves": "12:00-13:00",
+                "Viernes": "12:00-13:00"
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 3,
+            "Materia": "Administracion De Redes",
+            "Profesor": "Mendoza Morales Sergio Arturo",
+            "Horario": {
+                "Lunes": "13:00-14:00",
+                "Martes": "13:00-14:00",
+                "Miercoles": "13:00-14:00",
+                "Jueves": "13:00-14:00",
+                "Viernes": null
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 4,
+            "Materia": "Inteligencia Artificial",
+            "Profesor": "Castanuela Fuentes Luis Enrique",
+            "Horario": {
+                "Lunes": "08:00-09:00",
+                "Martes": "08:00-09:00",
+                "Miercoles": "08:00-09:00",
+                "Jueves": "08:00-09:00",
+                "Viernes": null
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 3,
+            "Materia": "Taller De Investigacion Ii",
+            "Profesor": "Moreno Rubio Judith Magaly",
+            "Horario": {
+                "Lunes": "17:00-18:00",
+                "Martes": "17:00-18:00",
+                "Miercoles": "17:00-18:00",
+                "Jueves": "17:00-18:00",
+                "Viernes": null
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 1,
+            "Materia": "Ingenieria De Software",
+            "Profesor": "Fernandez Chavez Eduardo",
+            "Horario": {
+                "Lunes": "14:00-15:00",
+                "Martes": "14:00-15:00",
+                "Miercoles": "14:00-15:00",
+                "Jueves": "14:00-15:00",
+                "Viernes": "14:00-15:00"
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 2,
+            "Materia": "Gestion De Proyectos De Software",
+            "Profesor": "Vazquez Esquivel Ana Laura",
+            "Horario": {
+                "Lunes": "19:00-20:00",
+                "Martes": "19:00-20:00",
+                "Miercoles": "19:00-20:00",
+                "Jueves": "19:00-20:00",
+                "Viernes": "18:00-20:00"
+            },
+            "Semestre": "7"
+        }
+    ],
+    "Horario 4": [
+        {
+            "ID": 3,
+            "Materia": "Lenguajes Y Automatas Ii",
+            "Profesor": "Cabrera Chagoyan Karina",
+            "Horario": {
+                "Lunes": "12:00-13:00",
+                "Martes": "12:00-13:00",
+                "Miercoles": "12:00-13:00",
+                "Jueves": "12:00-13:00",
+                "Viernes": "12:00-13:00"
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 3,
+            "Materia": "Administracion De Redes",
+            "Profesor": "Mendoza Morales Sergio Arturo",
+            "Horario": {
+                "Lunes": "13:00-14:00",
+                "Martes": "13:00-14:00",
+                "Miercoles": "13:00-14:00",
+                "Jueves": "13:00-14:00",
+                "Viernes": null
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 4,
+            "Materia": "Inteligencia Artificial",
+            "Profesor": "Castanuela Fuentes Luis Enrique",
+            "Horario": {
+                "Lunes": "08:00-09:00",
+                "Martes": "08:00-09:00",
+                "Miercoles": "08:00-09:00",
+                "Jueves": "08:00-09:00",
+                "Viernes": null
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 3,
+            "Materia": "Taller De Investigacion Ii",
+            "Profesor": "Moreno Rubio Judith Magaly",
+            "Horario": {
+                "Lunes": "17:00-18:00",
+                "Martes": "17:00-18:00",
+                "Miercoles": "17:00-18:00",
+                "Jueves": "17:00-18:00",
+                "Viernes": null
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 3,
+            "Materia": "Ingenieria De Software",
+            "Profesor": "Hernandez Calderon Carmen Melida",
+            "Horario": {
+                "Lunes": "16:00-17:00",
+                "Martes": "16:00-17:00",
+                "Miercoles": "16:00-17:00",
+                "Jueves": "16:00-17:00",
+                "Viernes": "16:00-17:00"
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 2,
+            "Materia": "Gestion De Proyectos De Software",
+            "Profesor": "Vazquez Esquivel Ana Laura",
+            "Horario": {
+                "Lunes": "19:00-20:00",
+                "Martes": "19:00-20:00",
+                "Miercoles": "19:00-20:00",
+                "Jueves": "19:00-20:00",
+                "Viernes": "18:00-20:00"
+            },
+            "Semestre": "7"
+        }
+    ],
+    "Horario 5": [
+        {
+            "ID": 3,
+            "Materia": "Lenguajes Y Automatas Ii",
+            "Profesor": "Cabrera Chagoyan Karina",
+            "Horario": {
+                "Lunes": "12:00-13:00",
+                "Martes": "12:00-13:00",
+                "Miercoles": "12:00-13:00",
+                "Jueves": "12:00-13:00",
+                "Viernes": "12:00-13:00"
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 4,
+            "Materia": "Administracion De Redes",
+            "Profesor": "Martinez Martinez Oscar Humberto",
+            "Horario": {
+                "Lunes": null,
+                "Martes": "18:00-20:00",
+                "Miercoles": null,
+                "Jueves": "18:00-20:00",
+                "Viernes": null
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 1,
+            "Materia": "Inteligencia Artificial",
+            "Profesor": "Castanuela Fuentes Luis Enrique",
+            "Horario": {
+                "Lunes": "09:00-10:00",
+                "Martes": "09:00-10:00",
+                "Miercoles": "09:00-10:00",
+                "Jueves": "09:00-10:00",
+                "Viernes": null
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 3,
+            "Materia": "Taller De Investigacion Ii",
+            "Profesor": "Moreno Rubio Judith Magaly",
+            "Horario": {
+                "Lunes": "17:00-18:00",
+                "Martes": "17:00-18:00",
+                "Miercoles": "17:00-18:00",
+                "Jueves": "17:00-18:00",
+                "Viernes": null
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 3,
+            "Materia": "Ingenieria De Software",
+            "Profesor": "Hernandez Calderon Carmen Melida",
+            "Horario": {
+                "Lunes": "16:00-17:00",
+                "Martes": "16:00-17:00",
+                "Miercoles": "16:00-17:00",
+                "Jueves": "16:00-17:00",
+                "Viernes": "16:00-17:00"
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 3,
+            "Materia": "Gestion De Proyectos De Software",
+            "Profesor": "Manrique Pena Paola Denis",
+            "Horario": {
+                "Lunes": "13:00-14:00",
+                "Martes": "13:00-14:00",
+                "Miercoles": "13:00-14:00",
+                "Jueves": "13:00-14:00",
+                "Viernes": "13:00-15:00"
+            },
+            "Semestre": "7"
+        }
+    ],
+    "Horario 6": [
+        {
+            "ID": 3,
+            "Materia": "Lenguajes Y Automatas Ii",
+            "Profesor": "Cabrera Chagoyan Karina",
+            "Horario": {
+                "Lunes": "12:00-13:00",
+                "Martes": "12:00-13:00",
+                "Miercoles": "12:00-13:00",
+                "Jueves": "12:00-13:00",
+                "Viernes": "12:00-13:00"
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 4,
+            "Materia": "Administracion De Redes",
+            "Profesor": "Martinez Martinez Oscar Humberto",
+            "Horario": {
+                "Lunes": null,
+                "Martes": "18:00-20:00",
+                "Miercoles": null,
+                "Jueves": "18:00-20:00",
+                "Viernes": null
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 4,
+            "Materia": "Inteligencia Artificial",
+            "Profesor": "Castanuela Fuentes Luis Enrique",
+            "Horario": {
+                "Lunes": "08:00-09:00",
+                "Martes": "08:00-09:00",
+                "Miercoles": "08:00-09:00",
+                "Jueves": "08:00-09:00",
+                "Viernes": null
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 3,
+            "Materia": "Taller De Investigacion Ii",
+            "Profesor": "Moreno Rubio Judith Magaly",
+            "Horario": {
+                "Lunes": "17:00-18:00",
+                "Martes": "17:00-18:00",
+                "Miercoles": "17:00-18:00",
+                "Jueves": "17:00-18:00",
+                "Viernes": null
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 3,
+            "Materia": "Ingenieria De Software",
+            "Profesor": "Hernandez Calderon Carmen Melida",
+            "Horario": {
+                "Lunes": "16:00-17:00",
+                "Martes": "16:00-17:00",
+                "Miercoles": "16:00-17:00",
+                "Jueves": "16:00-17:00",
+                "Viernes": "16:00-17:00"
+            },
+            "Semestre": "7"
+        },
+        {
+            "ID": 3,
+            "Materia": "Gestion De Proyectos De Software",
+            "Profesor": "Manrique Pena Paola Denis",
+            "Horario": {
+                "Lunes": "13:00-14:00",
+                "Martes": "13:00-14:00",
+                "Miercoles": "13:00-14:00",
+                "Jueves": "13:00-14:00",
+                "Viernes": "13:00-15:00"
+            },
+            "Semestre": "7"
+        }
+    ]
+}

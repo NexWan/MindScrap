@@ -94,6 +94,7 @@ def generarHorario(sc):
             print(f"Profesor: {materia['Profesor']}")
             print(f"Semestre: {materia['Semestre']}")
             print(f"Horario: {materia['Horario']}")
+    Utils().createJson(combinaciones)
 
 
 def seleccionarMateriasConGrupos(materiasSeleccionadas, materiasGrupo):

@@ -104,3 +104,13 @@ class Utils:
         combinations = []
         backtrack([], 0, set())
         return combinations
+    
+    def createJson(self, data):
+        labeled_data = {}
+        for i, schedule in enumerate(data, start=1):
+            labeled_data[f"Horario {i}"] = schedule
+
+        with open('horarios.json', 'w') as f:
+            json.dump(labeled_data, f, indent=4, ensure_ascii=False)
+
+        print("Archivo horarios.json creado")

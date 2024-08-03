@@ -94,5 +94,7 @@ python src/main.py
 
 Si quieres ver un ejemplo de como almacena la informacion ve a el siguiente [enlace](example/example.json)
 
+Ejemplo de el formato de horario que genera de momento en JSON: [enlace](example/example2.json)
+
 ### Ejemplo de uso para generar horario
 ![placeholder](example/terminal.gif)
