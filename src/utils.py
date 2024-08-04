@@ -3,6 +3,7 @@ import os
 import itertools
 import sys
 import time
+import xlsxwriter
 
 class Utils:
     def __init__(self) -> None:
@@ -140,3 +141,36 @@ class Utils:
             "_token": token
         }
         self.setCookies(cookies)
+
+    def createExcel(self, data):
+        workbook = xlsxwriter.Workbook('horarios.xlsx')
+        bold = workbook.add_format({'bold': True})
+        for i, schedule in enumerate(data, start=1):
+            worksheet = workbook.add_worksheet(f'Horario {i}')
+
+             # Set column widths
+            worksheet.set_column('A:A', 30)  # Materia
+            worksheet.set_column('B:B', 30)  # Profesor
+            worksheet.set_column('C:G', 15)  # Lunes to Viernes
+
+            worksheet.write('A1', 'Materia', bold)
+            worksheet.write('B1', 'Profesor', bold)
+            worksheet.write('C1', 'Lunes', bold)
+            worksheet.write('D1', 'Martes', bold)
+            worksheet.write('E1', 'Miércoles', bold)
+            worksheet.write('F1', 'Jueves', bold)
+            worksheet.write('G1', 'Viernes', bold)
+
+            row = 1
+            for materia in schedule:
+                worksheet.write(row, 0, materia['Materia'])
+                worksheet.write(row, 1, materia['Profesor'])
+                worksheet.write(row, 2, materia['Horario'].get('Lunes', ''))
+                worksheet.write(row, 3, materia['Horario'].get('Martes', ''))
+                worksheet.write(row, 4, materia['Horario'].get('Miercoles', ''))
+                worksheet.write(row, 5, materia['Horario'].get('Jueves', ''))
+                worksheet.write(row, 6, materia['Horario'].get('Viernes', ''))
+                row += 1
+
+        workbook.close()
+        print("Archivo horarios.xlsx creado")

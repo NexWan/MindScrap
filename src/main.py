@@ -3,6 +3,7 @@ from colors import *
 from utils import *
 import time
 import threading
+import os
 
 def printWelcome2():
     # Secuencia de escape ANSI para limpiar la consola
@@ -87,20 +88,20 @@ def generarHorario(sc):
     stop_event.set()
     hilo_cargando.join()
     print("\033c", end="")
-    print(f"{colors.pink_color}Se generaron {len(combinaciones)} combinaciones de horarios{colors.reset_color}")
     if len(combinaciones) == 0:
         print(f"{colors.red_color} No se encontraron combinaciones de horarios{colors.reset_color}")
         print(f"{colors.pink_color}Intenta ampliar tu rango de grupos y materias{colors.reset_color}")
         return
-    for i, combinacion in enumerate(combinaciones):
-        print(f"\n{colors.pink_color}Combinacion {i+1}{colors.reset_color}")
-        for materia in combinacion:
-            print(f"\n{colors.yellow_color}Materia: {materia['Materia']}{colors.reset_color}")
-            print(f"Profesor: {materia['Profesor']}")
-            print(f"Semestre: {materia['Semestre']}")
-            print(f"Horario: {materia['Horario']}")
+    print(f"{colors.pink_color}Se han encontrado {len(combinaciones)} combinaciones de horarios{colors.reset_color}")
+    print(f"{colors.pink_color}Las combinaciones se han guardado en {os.getcwd()}\\horarios.json {colors.reset_color}")
     Utils().createJson(combinaciones)
-
+    confirmation = input("Deseas convertir las combinaciones a un archivo excel? (y/n): ")
+    if confirmation == "y":
+        Utils().createExcel(combinaciones)
+        print(f"{colors.pink_color}El archivo se ha guardado en {os.getcwd()}\\horarios.xlsx{colors.reset_color}")
+    else:
+        print(f"{colors.pink_color}Gracias por usar MindScrap{colors.reset_color}")
+        return
 
 def seleccionarMateriasConGrupos(materiasSeleccionadas, materiasGrupo):
     materiasFinal = []
@@ -239,7 +240,7 @@ def __main__():
             else:
                 print("Opcion no valida")
         except Exception as e:
-            print(f"{colors.red_color}Ocurrio un error: {e} {colors.reset_color}")
+            print(f"{colors.red_color}Ocurrio un error: {e.with_traceback} {colors.reset_color}")
             print(f"{colors.red_color}Por favor, intenta de nuevo{colors.reset_color}")
             exit(0)
 
