@@ -3,3 +3,4 @@ src/__pycache__/
 cookies.json
 data.json
 horarios.json
+*.xlsx
