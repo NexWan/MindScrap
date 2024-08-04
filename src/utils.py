@@ -114,3 +114,29 @@ class Utils:
             json.dump(labeled_data, f, indent=4, ensure_ascii=False)
 
         print("Archivo horarios.json creado")
+
+    def setCookies(self, cookies):
+        with open('cookies.json', 'r') as f:
+            data = json.load(f)
+            data['INGRESSCOOKIE'] = cookies['INGRESSCOOKIE']
+            data['XSRF-TOKEN'] = cookies['XSRF-TOKEN']
+            data['mbid_11_session'] = cookies['mbid_11_session']
+            data['_token'] = cookies['_token']
+        with open('cookies.json', 'w') as f:
+            json.dump(data, f, indent=4)
+        print("Cookies guardadas correctamente")
+
+    def cookiesPrompt(self):
+        print("Por favor, ingresa las cookies de Mindbox")
+        print("Si no estas seguro de como obtener las cookies, visita el siguiente enlace: \033]8;;https://github.com/NexWan/MindScrap\033\\https://github.com/NexWan/MindScrap\033]8;;\033\\")
+        ingress = input("Ingresa la cookie INGRESSCOOKIE: ")
+        xsrf = input("Ingresa la cookie XSRF-TOKEN: ")
+        session = input("Ingresa la cookie mbid_11_session: ")
+        token = input("Ingresa la cookie _token: ")
+        cookies = {
+            "INGRESSCOOKIE": ingress,
+            "XSRF-TOKEN": xsrf,
+            "mbid_11_session": session,
+            "_token": token
+        }
+        self.setCookies(cookies)

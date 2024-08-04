@@ -86,7 +86,12 @@ def generarHorario(sc):
     combinaciones = Utils().genCombinations(materiasFinal, numMaterias)
     stop_event.set()
     hilo_cargando.join()
+    print("\033c", end="")
     print(f"{colors.pink_color}Se generaron {len(combinaciones)} combinaciones de horarios{colors.reset_color}")
+    if len(combinaciones) == 0:
+        print(f"{colors.red_color} No se encontraron combinaciones de horarios{colors.reset_color}")
+        print(f"{colors.pink_color}Intenta ampliar tu rango de grupos y materias{colors.reset_color}")
+        return
     for i, combinacion in enumerate(combinaciones):
         print(f"\n{colors.pink_color}Combinacion {i+1}{colors.reset_color}")
         for materia in combinacion:
@@ -139,11 +144,11 @@ def seleccionarMaterias(grupoMaterias):
     print("A continuacion, se mostraran las materias de los semestres seleccionados")
     for i, (materia, semestre) in enumerate(materias_unicas.items()):
         print(f"{i}. {materia} - Semestre: {semestre}")
-    print(f"{colors.pink_color}Selecciona las materias que te gustaria cursar (Maximo 7) separadas por comas{colors.reset_color}")
+    print(f"{colors.pink_color}Selecciona las materias que te gustaria cursar (Maximo 8) separadas por comas{colors.reset_color}")
     materias_seleccionadas = input("Materias: ")
     materias_seleccionadas = materias_seleccionadas.split(",")
-    if len(materias_seleccionadas) > 7:
-        print("Solo puedes seleccionar 7 materias")
+    if len(materias_seleccionadas) > 8:
+        print("Solo puedes seleccionar hasta 8 materias")
         return
     materias_finales = {}
     for index in materias_seleccionadas:
@@ -182,7 +187,8 @@ def getInput():
     print("1. Obtener horario")
     print("2. Generar horario")
     print("3. Instrucciones")
-    print("4. Salir")
+    print("4. Modificar cookies")
+    print("5. Salir")
     return input("Selecciona una opcion: ")
 
 def printInstructions():
@@ -211,23 +217,31 @@ def __main__():
     if not utils.checkCookiesFile(): exit(0)
     scrapper = sc.Scrap("https://itsaltillo.mindbox.app/alumnos/reinscripcion/grupos-disponibles")
     while(True):
-        option = getInput()
-        if option == '1':
-            semestre = input("Ingresa el semestre: ")
-            scrapper.getHorario(semestre)
-        elif option == '2':
-            print("\033c", end="")
-            generarHorario(scrapper)
-        elif option == '3':
-            print("\033c", end="")
-            printInstructions()
-        elif option == '4':
-            # Secuencia de escape ANSI para limpiar la consola
-            print("\033c", end="")
-            print("Bye bye")
-            break
-        else:
-            print("Opcion no valida")
+        try:
+            option = getInput()
+            if option == '1':
+                semestre = input("Ingresa el semestre: ")
+                scrapper.getHorario(semestre)
+            elif option == '2':
+                print("\033c", end="")
+                generarHorario(scrapper)
+            elif option == '3':
+                print("\033c", end="")
+                printInstructions()
+            elif option == '4':
+                print("\033c", end="")
+                utils.cookiesPrompt()
+            elif option == '5':
+                # Secuencia de escape ANSI para limpiar la consola
+                print("\033c", end="")
+                print("Bye bye")
+                break
+            else:
+                print("Opcion no valida")
+        except Exception as e:
+            print(f"{colors.red_color}Ocurrio un error: {e} {colors.reset_color}")
+            print(f"{colors.red_color}Por favor, intenta de nuevo{colors.reset_color}")
+            exit(0)
 
 
 if __name__ == '__main__':
