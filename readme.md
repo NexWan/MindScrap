@@ -104,5 +104,5 @@ Ejemplo de el formato de horario que genera de momento en JSON: [enlace](example
 
 ## POR HACER
 
-- Hacer que el formato final sea en PDF (de momento es un JSON)
+- Hacer que el formato final sea en PDF (de momento es un JSON y XSLX [un excel])
 - Migrarlo a pagina web (No se si lo vaya a hacer xd)
