@@ -48,7 +48,7 @@ source env/bin/activate
 ### WINDOWS
 En windows utiliza el siguiente comando
 ```sh
-./env/Source/activate
+./env/Scripts/activate
 ```
 
 Una vez activado tu entorno virtual utiliza el siguiente comando para instalar las librerias utilizadas:

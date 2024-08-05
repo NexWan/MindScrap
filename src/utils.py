@@ -40,9 +40,9 @@ class Utils:
                 if token and xsrf and session:
                     return True
                 else:
-                    self.printFileEmptyMessage()
-                    exit(0)
-                    return False
+                    print("El archivo cookies.json no contiene las cookies necesarias")
+                    print("Por favor, ingresa las cookies de Mindbox en el archivo cookies.json o mediante la consola")
+                    return True
         except:
             return False
 
