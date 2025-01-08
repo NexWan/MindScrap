@@ -69,21 +69,17 @@ class Scrap:
         for row in data:
             print(row)
             if len(row) >= 10:
-                # Dividir la cadena en el carácter '/'
-                materia_parts = row[1].split('/')
-                # Asignar la parte después del '/' a la variable 'materia'
-                materia = materia_parts[1].strip() if len(materia_parts) > 1 else row[1].strip()
                 json_row = {
-                    "Materia": materia,
-                    "Profesor": row[2],
-                    "Grupo": row[3],
-                    "Semestre": row[4],
+                    "Materia": row[0],
+                    "Profesor": row[1],
+                    "Grupo": row[2],
+                    "Semestre": row[3],
                     "Horario": {
-                        "Lunes": row[5] if len(row) > 5 and row[5].strip() != "" else None,
-                        "Martes": row[6] if len(row) > 6 and row[6].strip() != "" else None,
-                        "Miercoles": row[7] if len(row) > 7 and row[7].strip() != "" else None,
-                        "Jueves": row[8] if len(row) > 8 and row[8].strip() != "" else None,
-                        "Viernes": row[9] if len(row) > 9 and row[9].strip() != "" else None,
+                        "Lunes": row[4],
+                        "Martes": row[5],
+                        "Miercoles": row[6],
+                        "Jueves": row[7],
+                        "Viernes": row[8],
                     }
                 }
                 json_data.append(json_row)

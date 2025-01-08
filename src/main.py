@@ -216,7 +216,7 @@ def __main__():
     printWelcome()
     utils = Utils()
     if not utils.checkCookiesFile(): exit(0)
-    scrapper = sc.Scrap("https://itsaltillo.mindbox.app/alumnos/reinscripcion/grupos-disponibles")
+    scrapper = sc.Scrap("https://itsaltillo.mindbox.app/students/enrollment/groups")
     while(True):
         try:
             option = getInput()
