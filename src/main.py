@@ -189,7 +189,8 @@ def getInput():
     print("2. Generar horario")
     print("3. Instrucciones")
     print("4. Modificar cookies")
-    print("5. Salir")
+    print("5. Obtener todos los semestres")
+    print("6. Salir")
     return input("Selecciona una opcion: ")
 
 def printInstructions():
@@ -210,6 +211,16 @@ OPCION 2: Esta opcion genera todas las combinaciones posibles de horarios con la
 Si no estas seguro de como obtener las cookies, visita el siguiente enlace: \033]8;;https://github.com/NexWan/MindScrap\033\\https://github.com/NexWan/MindScrap\033]8;;\033\\
     """
     print(instrucciones)
+
+def FetchAllSemesters(scrapper):
+    print("Obteniendo semestres...")
+    stop_event = threading.Event()
+    hilo_cargando = threading.Thread(target=Utils.mostrar_cargando, args=(stop_event,))
+    hilo_cargando.start()
+    scrapper.getAllSemesters()
+    stop_event.set()
+    hilo_cargando.join()
+    print("\033c", end="")
 
 def __main__():
     printWelcome2()
@@ -233,6 +244,9 @@ def __main__():
                 print("\033c", end="")
                 utils.cookiesPrompt()
             elif option == '5':
+                print("\033c", end="")
+                FetchAllSemesters(scrapper)
+            elif option == '6':
                 # Secuencia de escape ANSI para limpiar la consola
                 print("\033c", end="")
                 print("Bye bye")

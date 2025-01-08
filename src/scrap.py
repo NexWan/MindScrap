@@ -1,5 +1,6 @@
 import requests as req
 import json
+import os
 from bs4 import BeautifulSoup
 from unidecode import unidecode
 import re
@@ -95,6 +96,18 @@ class Scrap:
             json.dump(data, f, indent=4)
         print("Archivo data.json creado")
 
+    def createJsonBySemesters(self, data):
+        try:
+            os.makedirs('semesters', exist_ok=True)
+            for i in range(0, len(data)):
+                with open(f'semesters/semestre_{i+1}.json', 'w') as f:
+                    json.dump(data[i], f, indent=4)
+                print(f"Archivo semestre_{i}.json creado")
+            print("Archivos creados")
+        except Exception as e:
+            print(f"Error: {e}")
+
+
     def notValidCookie(self):
         print("Las cookies dadas no son validas, favor de revisarlas")
         print("Si tienes dudas de como obtener las cookies, visita el siguiente enlace: \033]8;;https://github.com/NexWan/MindScrap\033\\https://github.com/NexWan/MindScrap\033]8;;\033\\")
@@ -188,3 +201,21 @@ class Scrap:
                 grouped_groups[materia] = []
             grouped_groups[materia].append(group)
         return grouped_groups
+    
+    def getAllSemesters(self):
+        semesters = []
+        for i in range(1, 9):
+            print(f"Extrayendo datos de {i} semestre...")
+            _token = self.getSearchToken()
+            form_data = {
+                'semester': str(i),
+                '_token': _token
+            }
+            cookies = self.getCookies();
+            response = req.post(self.url, cookies=cookies, data=form_data)
+            data = self.extractTableData(response.text)
+            jsonData = self.parseToJson(data, False)
+            semesters.append(jsonData)
+
+        self.createJsonBySemesters(semesters)
+        return semesters
